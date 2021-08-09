@@ -1,0 +1,32 @@
+<div class="grid justify-content-center card">
+    <div class="col-10 sm:col-6 md:col-4">
+      <p-card>
+        <div class="grid">
+          <div class="col-12 text-center">
+            <i class="fas fa-car fa-4x" style="color: #007ad9;"></i>
+            <h2>Cadastro de turma</h2>
+          </div>
+          <div class="col-12">
+            <label for="disciplina">Disciplina:</label>
+            <input id="disciplina" class="col-12" type="text" pInputText />
+          </div>
+          <div class="col-12">
+            <label for="vagas">Vagas disponíveis:</label>
+            <input id="vagas" class="col-12" type="text" pInputText />
+          </div>
+          <div class="col-12">
+            <button
+              pButton
+              type="button"
+              label="Cadastrar turma"
+              class="col-12"
+              id="botaoCadastroTurma"
+              (click)="registrarTurma()"
+            ></button>
+          </div>
+
+        </div>
+      </p-card>
+    </div>
+  </div>
+ 

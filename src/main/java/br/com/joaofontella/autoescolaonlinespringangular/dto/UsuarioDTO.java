@@ -6,6 +6,7 @@ public class UsuarioDTO {
     private Long prk;
     private String usuario;
     private String senha;
+    private Boolean statusAdmin = false;
 
     public Long getPrk() {
         return prk;
@@ -16,6 +17,12 @@ public class UsuarioDTO {
         user.setPrk(u.getPrk());
         user.setUsuario(u.getUsuario());
         user.setSenha(u.getSenha());
+        return user;
+    }
+
+    public static UsuarioDTO converterSimples(Usuario u){
+        UsuarioDTO user = new UsuarioDTO();
+        user.setUsuario(u.getUsuario());
         return user;
     }
 
@@ -37,5 +44,13 @@ public class UsuarioDTO {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public Boolean getStatusAdmin() {
+        return statusAdmin;
+    }
+
+    public void setStatusAdmin(Boolean status) {
+        this.statusAdmin = status;
     }
 }

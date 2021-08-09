@@ -1,0 +1,23 @@
+<div class="grid justify-content-center card">
+    <div class="col-10 sm:col-6 md:col-4">
+      <p-card>
+        <div class="grid">
+          <div class="col-12 text-center">
+            <i class="fas fa-car fa-4x" style="color: #007ad9;"></i>
+            <h1>Bem vindo {{usuarioLogado}}</h1>
+            <h2>Turmas matriculadas</h2>
+          </div>
+         <div class="col-12">
+            <p-orderList [value]="listaTurmas">
+                <ng-template let-turma pTemplate="item">
+                    <div>
+                        <div class="itemTurma">{{turma}}</div>
+                    </div>
+                </ng-template>
+            </p-orderList>
+          </div>
+
+        </div>
+      </p-card>
+    </div>
+  </div>

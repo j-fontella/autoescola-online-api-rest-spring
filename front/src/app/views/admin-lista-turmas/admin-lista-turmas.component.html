@@ -1,0 +1,22 @@
+<div class="grid justify-content-center card">
+  <div class="col-10 sm:col-6 md:col-4">
+    <p-card>
+      <div class="grid">
+        <div class="col-12 text-center">
+          <i class="fas fa-car fa-4x" style="color: #007ad9;"></i>
+          <h2>Lista de turmas</h2>
+        </div>
+       <div class="col-12">
+          <p-orderList [value]="listaTurmas">
+              <ng-template let-turma pTemplate="item">
+                  <div>
+                      <div class="itemTurma" (click)="enviarTurma(turma.prk, turma.disciplina)" attr.data-target="{{turma.prk}}">{{turma.disciplina}} - {{turma.vagas}} vagas</div>
+                  </div>
+              </ng-template>
+          </p-orderList>
+        </div>
+
+      </div>
+    </p-card>
+  </div>
+</div>

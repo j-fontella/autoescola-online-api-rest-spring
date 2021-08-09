@@ -1,0 +1,38 @@
+
+<div class="grid justify-content-center card">
+    <div class="col-10 sm:col-6 md:col-4">
+      <p-card>
+        <div class="grid">
+          <div class="col-12 text-center">
+            <i class="fas fa-car fa-4x" style="color: #007ad9;"></i>
+            <h2 id="tituloturma"></h2>
+            <h3>Alunos cadastrados</h3>
+          </div>
+         <div class="col-12">
+            <p-orderList [value]="listaAlunos">
+                <ng-template let-aluno pTemplate="item">
+                    <div>
+                        <div class="itemTurma">{{aluno.nome}} <button (click)="excluirAluno(aluno.prk)">X</button></div>
+                    </div>
+                </ng-template>
+            </p-orderList>
+            <hr>
+            <h3 style="text-align: center;">Cadastrar novo aluno</h3>
+            <select class="selectCadastro" id="elegs">
+              <option value="{{usuario.prk}}" *ngFor="let usuario of listaElegiveis">{{ usuario.usuario }}</option>
+            </select>
+            <button
+              pButton
+              type="button"
+              label="Cadastrar"
+              class="col-12 p-button-success"
+              id="botaoLogin"
+              (click)="cadastrarAlunoTurma()"
+            ></button>
+          </div>
+  
+        </div>
+      </p-card>
+    </div>
+  </div>
+  

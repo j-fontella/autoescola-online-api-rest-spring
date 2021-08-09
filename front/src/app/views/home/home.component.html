@@ -1,0 +1,33 @@
+<div class="grid justify-content-center card">
+    <div class="col-10 sm:col-6 md:col-4">
+      <p-card>
+        <div class="grid">
+          <div class="col-12 text-center">
+            <i class="fas fa-car fa-4x" style="color: #007ad9;"></i>
+            <h2>Auto escola online</h2>
+          </div>
+          <div class="col-12">
+            <label for="usuario">Usuário:</label>
+            <input id="usuario" class="col-12" type="text" pInputText />
+          </div>
+          <div class="col-12">
+            <label for="senha">Senha:</label>
+            <input id="senha" class="col-12" type="text" pInputText />
+          </div>
+          <div class="col-12">
+            <button
+              pButton
+              type="button"
+              label="Entrar"
+              class="col-12"
+              id="botaoLogin"
+              (click)="acaoBotao()"
+            ></button>
+          </div>
+
+          <p id="labelRegistro" class="label-registro" (click)="alterarTextoRegistro()">Não tem uma conta? Registre-se</p>
+        </div>
+      </p-card>
+    </div>
+  </div>
+ 
